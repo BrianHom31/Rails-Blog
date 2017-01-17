@@ -1,0 +1,15 @@
+<h1><%= @message %></h1>
+
+<h4><% @users.each do |user| %>
+  <%= user.id %>.
+  <%= user.username.capitalize %>,<br>
+  Password: <%= user.password %>,<br>
+  Email: <%= user.email %>
+
+  <br><br>
+
+  <%= link_to ("User show page"), user_path(user.id) %> |
+  <%= link_to 'Delete user',  { action: :destroy, id: user.id }, method: :delete %>
+  <hr><br>
+
+<% end %></h4>

@@ -1,0 +1,18 @@
+<h1>All Posts: </h1>
+
+<h4><%= link_to ("Create new post"), new_post_path %></h4>
+<hr>
+
+<h4><% @posts.reverse.each do |post| %>
+  <%= post.id %>.
+  <%= post.title %> <br>
+  <%= post.content %> <br>
+
+  <br>
+
+  || <%= link_to ("Post show page"), post_path(post.id) %> ||
+  <%= link_to 'Delete post',  { action: :destroy, id: post.id }, method: :delete %> ||
+  <hr>
+
+<% end %>
+</h4>

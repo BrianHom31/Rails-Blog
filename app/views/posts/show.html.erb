@@ -1,0 +1,84 @@
+<h1><%= @post.user.username.capitalize %>'s Posts</h1>
+
+<!-- <h3>Title: </h3><%= @post.id %>. <%= @post.title %> <br> -->
+<!-- <h3>Review: </h3><%= @post.content %><br> -->
+<!-- <h3>Post show page</h3> -->
+
+<h3>[ Title ]</h3>
+<h4><%= @post.id %>.
+<%= @post.title %></h4>
+
+<h3>[ Review ]</h3>
+<h4><%= @post.content %></h4>
+
+<br>
+
+<h4>[ Written by ]:</h4>
+<h4><%= @post.user.username %></h4>
+
+<hr>
+
+<h3>[ Your Comments ]</h3><br>
+
+<h4><% @comments.each do |comment| %>
+  || <%= comment.content %> ||
+  <%= link_to ("Show Comment"), comment_path(comment.id) %> ||
+<% end %>
+</h4>
+
+<br>
+
+<%= form_for Comment.new do |f| %>
+
+  <%= f.label :content %> :
+  <%= f.text_field :content %> <br><br>
+
+  <%= f.label :user %> :
+  <%= f.collection_select :user_id, User.all, :id, :username %>
+<br><br>
+  <%= f.label :post %> :
+  <%= f.collection_select :post_id, Post.all, :id, :title %>
+
+  <br><br>
+
+  <%= f.submit "Submit Comment"%>
+<% end %>
+
+<br><br>
+
+
+
+<!-- <h3 class="heading">Title: <%= @post.title if @post.title %></h3><br/>
+<div class="row">
+	<div class="text-center post">
+		<a href="/users/<%= @post.user.id %>">Username: <%= @post.user.username %></a>
+	</div>
+
+	<div class="text-center post-content">
+		<%= @post.content %>
+	</div>
+</div> -->
+
+
+<!-- <div class="row">
+	<% @post.comments.each do |comment| %>
+	<div class="text-center user">
+		<a href="/user/<%= comment.user.id %>"> <%= comment.user.username %></a>
+	</div>
+	<div class="text-center user-content">
+	  <%= comment.content %>
+	</div>
+
+	<% end %>
+<h4 class='text-center'>Written by: <%= @post.user.username %></h4>
+  <div class="col-sm-12 text-center">
+
+	  <form method="POST" action="/posts">
+	    <input type="hidden" name="post_id" value="<%= @post.id %>"><br>
+	  	<textarea maxlength="255" cols="60" rows="5" name="message" placeholder="Add Your Comment"></textarea><br>
+	  	<input class="btn btn-default" type="submit">
+	  </form>
+
+  </div>
+
+</div> -->

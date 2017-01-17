@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Chewy|Fredoka+One|Permanent+Marker|Righteous" rel="stylesheet">
+    <title>RailsBlog</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <nav class="navbar">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand logo" href="/posts">rails blog</a>
+        </div>
+
+
+        <div class="butts pull-left">
+          <a href="/posts">Post</a>
+          <a href="/comments">Comments</a>
+          <a href="/users">User</a>
+        </div>
+        <div class="butts pull-right">
+          <a href="/signup">Sign Up</a>
+          <a href="/login">Log In</a>
+          <a href="/logout">Log Out</a>
+        </div>
+
+
+          <!-- <% if @user %>
+          <a href="/logout"><button type="button" class="btn btn-default navbar-btn pull-right">Sign out</button></a>
+          <% end %>
+          <p class="navbar-text pull-right"><%= "Welcome Back, #{@user.username.capitalize} !" if @user %> </p> -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <%= yield %>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+<div><h1><%= @message %></h1></div>
+
+<br><br>
+
+<h4><%= @user.id %>.
+Username: <%= @user.username.capitalize %>,<br>
+Email: <%= @user.email %>,<br>
+Password: <%= @user.password %></h4>
+
+<hr>
+
+<h4><div>Posts by this <%= @user.username.capitalize %>:</div><br>
+
+<% @user_posts.each do |post| %>
+  <%= post.id %>.
+  <%= link_to (post.title), post_path(post.id) %>
+  <br><br>
+<% end %>
+</h4>

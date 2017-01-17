@@ -1,0 +1,86 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// font-family: 'Righteous', cursive;
+// font-family: 'Permanent Marker', cursive;
+// font-family: 'Chewy', cursive;
+// font-family: 'Fredoka One', cursive;
+
+
+body {
+  text-align: center;
+  // background-color: beige;
+  background-color: sandybrown;
+}
+
+.navbar {
+  background-color: lightblue;
+}
+
+.logo {
+  background: orange;
+  background: sandybrown;
+  border-radius: 100%;
+  width: 200px;
+  height: 60px;
+  line-height: 28px;
+  text-align: center;
+  // color: royalblue;
+  color: blue;
+  font-size: 30px;
+  font-family: 'Fredoka One', cursive;
+  // font-family: 'Permanent Marker', cursive;
+  // font-family: 'Chewy', cursive;
+  // font-family: 'Righteous', cursive;
+  // font-weight: bold;
+}
+
+.logo:hover {
+  color: dodgerblue;
+}
+
+.butts {
+  border-radius: 100%;
+  background-color: lightcyan;
+  padding: 14px;
+}
+
+.butts a {
+  padding: 20px;
+  // font-weight: bold;
+  text-decoration: none;
+  font-family: 'Righteous', cursive;
+  // font-family: 'Permanent Marker', cursive;
+  // font-family: 'Chewy', cursive;
+  // font-family: 'Fredoka One', cursive;
+  font-size: 20px;
+}
+
+.butts a:hover {
+  color: deepskyblue;
+}
+
+h1 {
+// font-family: 'Righteous', cursive;
+// font-family: 'Permanent Marker', cursive;
+font-family: 'Chewy', cursive;
+// font-family: 'Fredoka One', cursive;
+font-size: 80px;
+}
+
+h2, h3 {
+  font-family: 'Righteous', cursive;
+  // font-family: 'Permanent Marker', cursive;
+  // font-family: 'Chewy', cursive;
+  // font-family: 'Fredoka One', cursive;
+}
+
+h4 {
+  // font-family: 'Righteous', cursive;
+  // font-family: 'Permanent Marker', cursive;
+  // font-family: 'Chewy', cursive;
+  font-family: 'Fredoka One', cursive;
+  font-size: 20px;
+}

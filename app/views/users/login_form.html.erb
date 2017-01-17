@@ -1,0 +1,16 @@
+<h1>Sign in!</h1>
+
+<div><%= @message %></div>
+
+<br><br>
+
+<%= form_tag("/login", method: "post") do %>
+
+  <%= label_tag(:username, "Username:") %>
+  <%= text_field_tag(:username) %><br><br>
+
+  <%= label_tag(:password, "Password:") %>
+  <%= text_field_tag(:password) %><br><br>
+
+  <%= submit_tag("Log In") %>
+<% end %>

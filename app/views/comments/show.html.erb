@@ -1,0 +1,37 @@
+<h2>Commented by <%= @user.username.capitalize %>:</h2>
+<h4><%= @user.id %>.
+Username: <%= @user.username.capitalize %><br>
+Email: <%= @user.email %></h4>
+<!-- Password: <%= @user.password %></h4> -->
+
+<br>
+<h4><%= @user.username.capitalize %>'s Posts:<br>
+<% @user_posts.each do |post| %>
+  <%= post.id %>.
+  <%= link_to (post.title), post_path(post.id) %>
+<% end %>
+</h4>
+<hr>
+
+
+
+
+
+
+<!-- <h3>Add comment</h3>
+
+<%= form_for Comment.new do |f| %>
+
+  <%= f.label :content %>:
+  <%= f.text_field :content %> <br><br>
+
+  <%= f.label :user %><br>
+  <%= f.collection_select :user_id, User.all, :id, :username %><br><br>
+
+  <%= f.label :post %><br>
+  <%= f.collection_select :post_id, Post.all, :id, :title %>
+
+  <br><br>
+
+  <%= f.submit %>
+<% end %> -->
